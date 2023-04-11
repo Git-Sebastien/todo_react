@@ -1,10 +1,8 @@
-import { useState } from "react"
-
-function ToDoForm(props){
+function ToDoForm({handleSubmit,handleRef}){
 
     return(
-        <form action="" onSubmit={props.handleSubmit}>
-            <input type="text" name="" id="" ref={props.handleRef} />
+        <form action="" onSubmit={handleSubmit}>
+            <input type="text" name="" id="" ref={handleRef} />
             <button type="submit">Ajouter</button>
         </form>        
     )

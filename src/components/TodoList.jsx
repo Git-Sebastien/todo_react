@@ -5,7 +5,7 @@ import Button from "./Button";
 
 
 function TodoList(){
-
+  
   const [list,setList] = useState([]);
   const [error,setError] = useState('');
   const ref = useRef(null);
@@ -18,8 +18,6 @@ function TodoList(){
       }
       setError('')
       setList([...list,{id:list.length + 1,item:ref.current.value,isFinish : false}]);
-
-
       ref.current.value = "";
   }
 
@@ -32,12 +30,12 @@ function TodoList(){
     setList([]);
   }
 
-    const checkTask = (id) => {
-      setList(
-        list.map(item => 
-          item.id === id ? {...item,isFinish: !item.isFinish}:item)
-      )
-    }
+  const checkTask = (id) => {
+    setList(
+      list.map(item => 
+        item.id === id ? {...item,isFinish: !item.isFinish} : item)
+    )
+  }
 
   return(
     <div>

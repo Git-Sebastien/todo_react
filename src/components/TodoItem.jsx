@@ -1,19 +1,23 @@
 import Button from "./Button"
 
-function TodoItem(props){
+function TodoItem({isChecked,handleClick,listItem,change}){
+
     return(
         <ul>
-            <li className={props.isChecked ? "finish" : ""}>
-                {props.listItem} - 
+            <li className={isChecked ? "finish" : ""}>
                 <Button 
                 purpose="Effacer" 
-                handleClick={props.handleClick}
-                /> - 
-                <input type="checkbox" 
+                handleClick={handleClick}
+                />
+                {listItem}
+                <input 
+                type="checkbox" 
                 name="" id="" 
-                checked={props.isChecked} 
-                onChange={props.change} />
+                checked={isChecked} 
+                onChange={change} 
+                />       
             </li>
+
         </ul>
     )
 }
