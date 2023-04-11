@@ -52,6 +52,7 @@ function TodoList(){
             change={()=>checkTask(element.id)}
             handleClick={() => removeTodo(index)} />
           )}
+          
       </div>
     </div>
   )
